@@ -39,7 +39,7 @@
   ansible.builtin.include_tasks: debian/letsencrypt/main.yml
   when:
     - CERT_CONFIG.mode == 'le_certbot'
-    - "ansible_distribution|lower in ['debian', 'ubuntu']"
+    - "ansible_distribution|lower in ['debian', 'ubuntu', 'elxr linux']"
 
 - name: Certificates | Snakeoil
   ansible.builtin.include_tasks: snakeoil.yml
